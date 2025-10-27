@@ -37,7 +37,7 @@ pub fn App() -> impl IntoView {
         None => {}
     });
 
-    let pokedex_handle = pokedex.clone();
+    let pokedex_handle = pokedex;
     let load_more = move |_| {
         if error.with(|err| err.is_some()) {
             error.set(None);
