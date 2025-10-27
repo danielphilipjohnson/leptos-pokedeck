@@ -745,7 +745,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "leptos-book-tutorial"
+name = "leptos-pokedeck"
 version = "0.1.0"
 dependencies = [
  "gloo-net 0.4.0",
