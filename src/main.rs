@@ -17,7 +17,7 @@ fn App(increment: i32) -> impl IntoView {
 
         <button
             on:click= move |_| {
-                set_count(count() + increment)
+                set_count.update(|count| *count += increment);
             }
         >
             "Click me: "
