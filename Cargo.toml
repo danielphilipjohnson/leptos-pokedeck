@@ -7,5 +7,6 @@ edition = "2021"
 
 [dependencies]
 leptos = { version = "0.5.1", features = ["csr"] }
-
+gloo-net = { version = "0.4", features = ["http"] }
+serde = { version = "1.0", features = ["derive"] }
 
