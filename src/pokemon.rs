@@ -19,7 +19,7 @@ impl Pokemon {
             .as_ref()
             .and_then(|other| other.official_artwork.as_ref())
             .and_then(|art| art.front_default.as_deref())
-            .or_else(|| self.sprites.front_default.as_deref())
+            .or(self.sprites.front_default.as_deref())
     }
 
     pub fn primary_type(&self) -> Option<&str> {
