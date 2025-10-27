@@ -14,6 +14,25 @@ A client-side rendered Leptos app that fetches Pokémon data from the PokéAPI a
 - [Trunk](https://trunkrs.dev/) for local dev/builds: `cargo install trunk`
 - (Optional) `npm install -g pnpm` if you want to experiment with frontend tooling alongside the Rust app
 
+## Client-Side Rendering with Trunk
+
+This repo ships as a client-side only (CSR) Leptos app, ideal for static WASM hosting or wrappers like Tauri.
+
+Install the Trunk CLI and the WebAssembly target once:
+
+```bash
+cargo install --locked trunk
+rustup target add wasm32-unknown-unknown
+```
+
+Then launch the live-reload dev server from the project root:
+
+```bash
+trunk serve --open
+```
+
+Trunk bundles the CSR build, watches `src/`, `style.css`, and `index.html`, and opens `http://127.0.0.1:8080/` by default.
+
 ## Run Locally
 
 ```bash
@@ -43,5 +62,4 @@ The optimized bundle is emitted to `dist/` and mirrors what the GitHub Actions w
 - `cargo check` validates the Leptos code without compiling WASM.
 - `cargo fmt && cargo clippy --all-targets --all-features` keeps formatting and linting tidy before commits.
 - When the dev server fails to refresh, purge the `dist/` folder and restart Trunk to generate a clean bundle.
-
 
