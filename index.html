@@ -3,12 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link data-trunk rel="css" rel="stylesheet" href="style.css" />
+    <link data-trunk rel="css" href="style.css" />
 
     <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
     <link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs />
+    <link data-trunk rel="copy-dir" href="public/images" data-target-path="images" />
 
-    <title>Leptos Example</title>
+
+    <title>Leptos Pokédex | Animated WebAssembly PokéAPI Demo</title>
+    <meta
+      name="description"
+      content="Responsive Leptos Pokédex that streams PokéAPI data, shows themed cards, and deploys seamlessly to GitHub Pages."
+    />
+    <meta name="author" content="Daniel Philip Johnson" />
+    <meta name="keywords" content="Leptos, Rust, Pokédex, PokéAPI, WebAssembly, WASM, GitHub Pages" />
+
+    <meta property="og:title" content="Leptos Pokédex" />
+    <meta
+      property="og:description"
+      content="A polished Leptos + WebAssembly Pokédex with animated cards, type filters, and GitHub Pages deployment."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://danielphilipjohnson.com/" />
+    <meta property="og:image" content="https://danielphilipjohnson.github.io/leptos-pokedeck/images/leptos-pokedex-social.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Leptos Pokédex" />
+    <meta
+      name="twitter:description"
+      content="Animated Leptos Pokédex that fetches PokéAPI data and ships as a GitHub Pages SPA."
+    />
+    <meta name="twitter:image" content="https://danielphilipjohnson.com/images/leptos-pokedex-social.png" />
+    <meta name="twitter:creator" content="@danielphilip_j" />
+
+    <link rel="canonical" href="https://danielphilipjohnson.com/" />
   </head>
   <body></body>
 </html>
