@@ -25,13 +25,12 @@ jobs:
       - uses: actions/checkout@v4
 
       # Toolchain
-      - name: Install nightly Rust
-        uses: dtolnay/rust-toolchain@nightly
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
         with:
+          toolchain: 1.84.0
           components: clippy, rustfmt
-
-      - name: Add WASM target
-        run: rustup target add wasm32-unknown-unknown
+          targets: wasm32-unknown-unknown
 
       # Run these sequentially so failures propagate
       - name: Lint (clippy)
